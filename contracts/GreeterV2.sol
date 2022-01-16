@@ -1,11 +1,10 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.0;
 
-import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "hardhat/console.sol";
 
-contract GreeterV2 is Initializable, OwnableUpgradeable {
+contract GreeterV2 is Initializable {
     /// @custom:oz-upgrades-unsafe-allow constructor
     constructor() initializer {}
 

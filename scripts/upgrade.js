@@ -7,10 +7,7 @@ async function main() {
   console.log("Beacon upgraded");
 
   const box = GreeterV2.attach('0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0');
-  console.log(await box.greet());
-
-  const tx = await box.resetGreeting();
-  await tx.wait();
+  
   console.log(await box.greet());
 }
 
