@@ -1,6 +1,6 @@
 # OpenZeppelin workshop - 30W3
 
-## Quickstart
+## tl;dr
 
 1. Setup
 ```
