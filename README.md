@@ -14,7 +14,7 @@ npm install --save-dev hardhat
 npx hardhat node
 ```
 
-3. Open a separate terminal in the project directory, then run the below to deploy and then upgrade a beacon proxy:
+3. Open a separate terminal in the project directory, then run the below to deploy and upgrade:
 ```
 npx hardhat run --network localhost scripts/deploy.js
 npx hardhat run --network localhost scripts/upgrade.js
@@ -42,4 +42,20 @@ function resetGreeting() public {
 ```
 9. Using the script examples [here](https://docs.openzeppelin.com/upgrades-plugins/1.x/hardhat-upgrades#beacon-proxies), add a [deploy.js](./scripts/deploy.js) and [upgrade.js](./scripts/upgrade.js) in the `scripts` directory but for the Greeter contracts.
 10. Using the test example [here](https://docs.openzeppelin.com/upgrades-plugins/1.x/hardhat-upgrades#beacon-proxies-tests), add a [upgrade-test.js](./test/upgrade-test.js) in the `test` directory but for the Greeter contracts.  The additional `const tx = await upgraded.resetGreeting();` section tests that the new function from the new version of the contract is working.
-11. Run the scripts and tests according to steps 2-4 in the Quickstart section above.
+11. Start a local Hardhat node
+```
+npx hardhat node
+```
+12. Open a separate terminal in the project directory, then run the below to deploy a beacon and beacon proxy:
+```
+npx hardhat run --network localhost scripts/deploy.js
+```
+13. Edit the `BEACON_ADDRESS` and `BOX_ADDRESS` in `scripts/upgrade.js` with the addresses displayed in the output after running the above.
+14. Run the below to upgrade the beacon:
+```
+npx hardhat run --network localhost scripts/upgrade.js
+```
+15. Run tests:
+```
+npx hardhat test
+```
