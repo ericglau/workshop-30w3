@@ -7,6 +7,7 @@
 git clone https://github.com/ericglau/workshop-oz-30w3
 cd workshop-oz-30w3
 npm install --save-dev hardhat
+npm install
 ```
 
 2. Start a local Hardhat node
